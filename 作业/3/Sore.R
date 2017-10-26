@@ -1,0 +1,11 @@
+run<-c(10.3,11.2,10.6,10.4,9.9)
+names(run)<-c('xiaoming','xiaoyue','xiaoxu','xiaohe','xiaohua')
+run
+run2<-c(11.2,10.3,11.5,11.0,11.1)
+names(run2)<-c('xiaoming','xiaoyue','xiaoxu','xiaohe','xiaohua')
+run2
+Sore<-cbind(run,run2)
+Sore
+colnames(Sore)<-c('第一场','第二场')
+Sore
+plot(Sore[1,])

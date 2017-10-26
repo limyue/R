@@ -1,0 +1,167 @@
+################第二章################
+#显示当前目录
+getwd()
+
+#改变工作目录/或\\
+setwd("C:/Users/Administrator/Desktop/0914140111李梦月上机作业六")
+setwd("C:\\Users\\Administrator\\Desktop\\0914140111李梦月上机作业六")
+
+#不退出R的情况下保存你的工作空间
+save.image()
+
+#使用history函数来查看最近输入的命令
+history()
+
+#.Last.value变量存储最近一个计算出的表达式值
+x=5
+x+10
+y<-.Last.value
+y
+
+#保留字不能做对象名break、else、FALSE、for、function、
+#if、Inf、NA、NaN、next、repeat、return、TURE、while
+#开头必须是英文字母或“.”，以点为开头时，第二个字母不能是数字
+#对象名称只能是字母、数字、“_”和“.”
+
+#、使用print函数输出所有变量和表达式值，也可以输出矩阵和列表值，每次只能显示一个对象
+z<-100
+print(z)
+
+#cat一个输出函数，功能和print有相同之处,可以将多个对象连接并以连续的方式显示,print不行
+a<-c(1,2,3)
+cat("hellow cat",a)
+
+#列出所有变量
+ls.str()
+#强制显示所有变量
+ls(all.names=TRUE)
+
+#删除变量-永久地从工作空间中删除一个或多个对象,无法撤销
+x<-55
+y<-66
+ls.str()
+rm(x,y)
+ls.str()
+
+#基本数学运算
+#次方(^/**)
+x<-2^4
+y<-2**4
+cat(x,y)
+#平方根--默认7位
+x=sqrt(16)
+x
+#对数--以m为底x的对数log(x,m)、log10()
+log(100,base=10)
+log10(100)
+log(100)
+#以e为低的对数log()
+
+#科学符号e---15000=1.5*10^4=1.5e4
+x<-2e4/2e3
+x
+
+#四舍五入函数round(x, digits=k) / round(x, k)
+round(982.546,digits=2)
+round(982.546,2)
+round(982.546,-2)
+round(922.546,-2)
+
+#实数x以四舍五入方式保留k位有效数字signif(x, digits=k)
+signif(11.0592,digits=3)
+signif(11.0592,3)
+
+#近似函数(取整)
+#floor(x)：得到小于等于x的最近整数
+#ceiling(x)得到大于等于x的最近整数
+#trunc(x)直接取整，小数全舍
+floor(11.0592)
+ceiling(11.0592)
+trunc(11.0592)
+
+#阶乘factorial(x)
+factorial(3)
+
+#特殊运算符
+# %%：取模、求余；%/%：整除；%*%：矩阵乘积；%in%：右侧变量中包含左侧变量时，为TRUE，否则，为FALSE
+5%%2
+5%/%2
+c(1,2)%*%c(1,2)
+c(1,2)%in%c(1,2)
+c(1,2)%in%c(3,4,1)
+
+#特殊变量
+#Inf无限大    -Inf负无限大
+x=-5/0
+x
+5/Inf
+#判断是否是无限大/无限小
+is.infinite(x)
+is.finite(x)
+
+#NaN非数字或无定义数字
+y<-Inf/Inf
+y
+is.nan(y)
+
+#NA 缺失或无法得到
+z<-NA+100
+z
+is.na(z)
+
+########第三章########
+
+#numeric()函数生成初始向量，向量的元素均为0 numeric(length=0)
+numeric(length=4)
+#数列seq(from, to, by=width, length.out=numbers)
+seq(3,9)
+seq(3,9,by=2)
+seq(3,9,length.out=5)
+
+#重复向量对象函数rep()rep(x, times=重复次数, each=每次每个元素的重复次数, length.out = 向量长度)
+rep(3, 3)
+rep(1:3, times=3, each=3)
+rep(1:3, times=3, each=3, length.out=8)
+
+#简单向量对象的运算
+x<-1:5
+y<-x+3 
+y
+#不同长度向量对象相乘
+x<-c(1,2,3,4)
+y<-c(1,2)
+z<-x*y
+z
+#常见向量对象的数学运算函数
+#sum()求和
+sum(22+33)
+#max()最大值
+x<-c(2,4,7,1)
+max(x)
+#min()最小值
+min(x)
+#length()计算向量对象长度函数结果为向量长度，即向量元素个数
+length(x)
+#prod()函数 计算所有元素的积
+prod(1:3)
+#cumsum():连加，即前一个元素加上后一个元素的和作为后一个元素的新值存入向量中。
+cumsum(1:4)
+#cumprod():连乘
+cumprod(1:3)
+#cummax():最大
+cummax(1:3)
+#cummin():最小
+cummin(1:4)
+#diff()返回各元素与下一个元素的差结果会比原先向量少一个元素
+#sort(x, decreasing = FALSE)从小到大排序
+#rank()传回向量对象，结果是原向量对象的各元素在元向量对象按从小到大排序后所得向量对象中的位次
+#rev()将向量对象颠倒排列
+#mean()：计算样本的平均值
+#media()：计算样本的中位数
+#sd()：计算样本的标准偏差
+#var()：计算样本的方差
+#cor(x, y)：计算两变量间的相关系数
+#cov(x, y)：计算两变量间的协方差
+
+
+

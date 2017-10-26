@@ -1,0 +1,12 @@
+math<-c(81,85,70,65,88,90,91,92,93)
+Math.score<-matrix(math,3,3)
+Math.score
+colSums(Math.score)
+colsum<-colSums(Math.score)
+sum<-colsum[1]+colsum[2]+colsum[3]
+sum
+rowmean<-rowMeans(Math.score)
+meanSum<-rowmean[1]+rowmean[2]+rowmean[3]
+meanSum/3
+Math.score[2,2]<-93
+Math.score
